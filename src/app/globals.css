@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020518;
+  --foreground: #ffffff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020518;
+    --foreground: #ffffff;
   }
 }
 
@@ -18,4 +23,57 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.custom-btn {
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  background: rgb(0,48,153);
+  background: -moz-linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
+  background: linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003099",endColorstr="#0051ff",GradientType=1);
+  border: 1px solid #28ADFF;
+  border-radius: 50px;
+  z-index: 1; /* Baseline z-index */
+  color: white;
+  align-items: center;
+  gap: 14px;
+}
+
+.custom-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1; /* Placé sous le bouton pour ne pas gêner le texte */
+}
+
+.custom-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: 2; /* Place ce pseudo-élément au-dessus du flou mais sous le texte */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
