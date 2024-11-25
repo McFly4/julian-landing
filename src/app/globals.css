@@ -11,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #020518;
@@ -25,28 +24,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src:
+    url("./fonts/clashDisplay/ClashDisplay-Variable.woff2") format("woff2"),
+    url("./fonts/clashDisplay/ClashDisplay-Variable.woff") format("woff"),
+    url("./fonts/clashDisplay/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
 
+.clashFont {
+  font-family: "ClashDisplay-Variable", sans-serif;
+}
 
 .custom-btn {
+  font-size: 18px;
   position: relative;
-  display: flex;
-  text-transform: uppercase;
   padding: 12px 18px;
-  background: rgb(0,48,153);
-  background: -moz-linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
-  background: linear-gradient(90deg, rgba(0,48,153,1) 0%, rgba(0,81,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003099",endColorstr="#0051ff",GradientType=1);
-  border: 1px solid #28ADFF;
-  border-radius: 50px;
-  z-index: 1; /* Baseline z-index */
-  color: white;
-  align-items: center;
-  gap: 14px;
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  gap: 5px;
+  z-index: 10;
 }
 
 .custom-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -54,19 +59,34 @@ body {
   bottom: 0;
   border-radius: 50px;
   background: inherit;
-  filter: blur(10px);
+  filter: blur(50px);
   z-index: -1; /* Placé sous le bouton pour ne pas gêner le texte */
 }
 
-.custom-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50px;
-  z-index: 2; /* Place ce pseudo-élément au-dessus du flou mais sous le texte */
+.button-shadow {
+  box-shadow: -4px 4px 0px #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 13px 15px;
+  background: #fff;
+  color: #000;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-family: "ClashDisplay-Variable", sans-serif;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.item-embla {
+  flex: 0 0 350px; /* Slide covers 200px of the viewport */
+  min-width: 0;
+}
+
+.offres-content {
+  background: url(../../public/bgOffres.png) no-repeat;
+  background-size: cover;
+  border-radius: 30px;
 }
 
 @layer base {
@@ -75,5 +95,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.separator {
+  width: 90%;
+  height: 1px;
+  background: #fff;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .offres-content {
+    background: url(../../public/bgOffresMobile.png) no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orderRevert {
+    order: -1;
   }
 }

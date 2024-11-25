@@ -11,7 +11,7 @@ import {
 
 export default async function Header() {
   return (
-    <nav className="fixed w-full bg-[#070A16] border-effect px-4 xl:px-16 py-6 flex items-center justify-between overflow-hidden">
+    <nav className="z-50 fixed w-full bg-[#070A16] border-effect px-4 xl:px-16 py-6 flex items-center justify-between overflow-hidden">
       <Image src="/logo.svg" alt="Company Logo" width={120} height={45} />
       <div className="hidden xl:flex gap-10 ">
         <Link href="#whoami">Qui je suis</Link>
@@ -19,8 +19,9 @@ export default async function Header() {
         <Link href="#reviews">Avis clients</Link>
       </div>
       <Link href="#pricing">
-        <button className="hidden xl:flex custom-btn">
-          Vos visuels en un clic avec l&apos;IA
+        <button className="hidden xl:flex custom-btn font-light">
+          Réserver
+          <span className="clashFont font-semibold">un appel</span>
         </button>
       </Link>
       <div className="xl:hidden">
