@@ -1,46 +1,39 @@
 "use client";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Image from "next/image";
-import * as React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function CarouselOffres() {
-  const numberArray = Array.from({ length: 7 }, (_, i) => i + 1);
+  const numberArray = Array.from({ length: 5 }, (_, i) => i + 1);
   return (
-    <div>
-      <Carousel
-        className="w-full"
-        opts={{
-          align: "start",
-          loop: true,
-          slidesToScroll: 1,
+    <div className="my-10">
+      <Swiper
+        slidesPerView={5}
+        centeredSlides={true}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
+        className="verticalSwiper"
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, Navigation]}
+        speed={10000}
       >
-        <CarouselContent>
-          {numberArray.map((number) => (
-            <CarouselItem key={number} className="pl-1 item-embla">
-              <div className="flex justify-center items-center h-[400px]">
-                <Image
-                  src={`/carousel/${number}.png`}
-                  alt={`Offre ${number}`}
-                  className="object-cover pl-2"
-                  width={355}
-                  height={200}
-                />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+        {numberArray.map((number) => (
+          <SwiperSlide key={number}>
+            <img
+              src={`/carousel/${number}.png`}
+              alt={`Offre ${number}`}
+              className="object-cover "
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }

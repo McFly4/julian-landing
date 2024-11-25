@@ -1,6 +1,12 @@
 import Image from "next/image";
 import CarouselOffres from "@/components/CarouselOffres";
 import CarouselBrands from "@/components/CarouselBrands";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -131,7 +137,7 @@ export default function Home() {
           de design, d&apos;architecture web, et d&apos;optimisation UX.
         </p>
       </div>
-      <div className="flex-col md:flex-row flex gap-[30px] mt-[120px] items-stretch justify-center">
+      <div className="flex-col md:flex-row flex gap-[30px] mt-[120px] items-center md:items-stretch justify-center">
         <div className="w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
           <div className="flex justify-between items-start">
             <img src="/fonctionnement/etape1.svg" alt="icon" />
@@ -402,7 +408,227 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="hidden h-[65vh] overflow-hidden mt-[70px] md:mt-[170px] md:flex gap-4 px-4">
+        <div className="flex flex-col gap-4">
+          <img src="/realisations/1.svg" alt="1" />
+          <img src="/realisations/2.svg" alt="1" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <img src="/realisations/3.svg" alt="1" />
+          <img src="/realisations/4.svg" alt="1" />
+          <img src="/realisations/5.svg" alt="1" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <img src="/realisations/6.svg" alt="1" />
+          <img src="/realisations/7.svg" alt="1" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <img src="/realisations/8.svg" alt="1" />
+          <img src="/realisations/9.svg " alt="1" />
+        </div>
+      </div>
+      <div className="hidden md:block mt-[100px] p-[30px]">
+        <div className="flex bg-white rounded-2xl p-6 clashFont gap-10">
+          <div className="flex flex-col">
+            <p className="text-black text-3xl">Encore hésitant ?</p>
+            <p className="text-black text-3xl">
+              Validé par <span className="font-semibold">+150 clients !</span>
+            </p>
+            <div className="avis-card mt-10 rotate-6">
+              <p className="avis-card-p">
+                Julian est disponible, réactif, créatif et professionnel, avec
+                toute cette palette celà fait de lui le Désginer idéal pour vos
+                futurs projets. Talentueux sans même en prendre conscience et
+                toujours force de proposition pour vous surprendre positivement
+                ! N&apos;hésitez pas à vous lancer avec Julian vous ne serez pas
+                déçu !
+              </p>
+              <div>
+                <p>Isaac</p>
+                <p>Wellness Factory</p>
+              </div>
+            </div>
+            <div className="avis-card mt-6">
+              <p className="avis-card-p">
+                Très bonne expérience avec Julian, ultra réactif, efficace, à
+                l&apos;écoute pour une refonte de notre page très réussie.
+              </p>
+              <div>
+                <p>Famille</p>
+                <p>SAS ARCADYS</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <div className="ml-4 avis-card">
+              <p className=" avis-card-p">
+                Julian a su être très réactif et très patient lors de ce projet.
+                Il a compris rapidement tout les besoins et enjeux du projet,
+                nous retravaillerons avec lui sans hésitation!
+              </p>
+              <div>
+                <p>Jerome</p>
+                <p>SMART RECRUITING</p>
+              </div>
+            </div>
+            <div className="-ml-2 avis-card">
+              <p className="avis-card-p">
+                Travail de qualité, expertise et prise d&apos;initiative en
+                prime. Il a su comprendre nos besoins et y répondre parfaitement
+                dans un délai très court. Il a été un réel atout pour notre
+                projet
+              </p>
+              <div>
+                <p>Chloe</p>
+                <p>Simba digital</p>
+              </div>
+            </div>
+            <div className="-ml-4 avis-card">
+              <p className="avis-card-p">
+                Julian sait communiquer , et il sait repondre aux attentes en
+                détail de ce qui lui ai demander . Disponible et ouvert
+                d&apos;esprit avec un vrai professionalisme . Merci pour la
+                création de mon site.
+              </p>
+              <div>
+                <p>Jeremy</p>
+                <p>Hedooh</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 justify-center z-10">
+            <div className="-ml-12 avis-card -rotate-2">
+              <p className="avis-card-p">
+                Julian a réalisé pour nous une LP au top ! Nous n&apos;avions
+                pas trop de direction pour le choix des couleurs / police et le
+                design général. Quelques échanges avec lui ont suffi pour le
+                mettre dans la bonne direction. Quelques jours plus tard nous
+                avions une LP parfaite pour le lancement de notre SaaS ! Toutes
+                l&apos;équipe était très satisfaite de sa production, au-delà de
+                ce que nous aurions attendu à ce tarif, bien joué ! Nous avons
+                désormais une direction graphique claire, un parcours
+                utilisateurs fluide définit.. Encore merci !
+              </p>
+              <div>
+                <p>Kevin</p>
+                <p>Emeka</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-20 -ml-12 ">
+            <div className="avis-card rotate-2">
+              <p className="avis-card-p">
+                Julian est professionnel, respecte les deadlines, est disponible
+                et surtout fourni du travail de qualité. Il a fait preuve
+                d&apos;imagination pour notre site orienté IA et a appliqué nos
+                nombreux changements. C&apos;était un plaisir de travailler avec
+                Julian
+              </p>
+              <div>
+                <p>Remy</p>
+                <p>Algorithm Dimension</p>
+              </div>
+            </div>
+            <div className="avis-card rotate-2">
+              <p className="avis-card-p">
+                Super travail, je suis ravie ! Julian a su analyser notre
+                secteur d&apos;activité, le besoin de nos clients et nous a
+                concocté une fiche produit aux petits oignons. Hâte de voir
+                l&apos;impact sur le taux de transfo. Je recommande Julian les
+                yeux fermés
+              </p>
+              <div>
+                <p>Alexandra</p>
+                <p>TIAMAMY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-[100px] flex flex-col justify-center items-center clashFont">
+        <p className="text-center  text-3xl">
+          Il n&apos;y a jamais de{" "}
+          <span className="font-semibold">question bête</span>
+        </p>
+        <p className="text-center  mt-[22px] text-[#94A3B8]">
+          Découvrez les réponses aux questions les plus fréquentes posées par
+          nos clients.
+        </p>
+        <div className="px-4 md:px-0 mt-10 flex flex-col md:flex-row justify-center gap-[75px]">
+          <div className="md:w-[900px]">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
+                  Combien de temps dure une prestation ?
+                </AccordionTrigger>
+                <AccordionContent>
+                  La durée de nos prestations s&apos;étend généralement sur 2 à
+                  3 semaines.
+                  <br />
+                  <br />
+                  Ce délai peut fluctuer en fonction des échanges, des
+                  ajustements nécessaires ou des éventuels changements de cap.
+                  Si nous nous engageons à respecter nos délais, votre
+                  réactivité sera essentielle pour les maintenir.{" "}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
+                  Puis-je vous régler en plusieurs fois ?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Nous offrons la possibilité de régler en plusieurs fois, car
+                  nous souhaitons que le prix ou le budget ne soit pas un
+                  obstacle à votre collaboration avec nous.
+                  <br />
+                  <br />
+                  La seule condition fixe est le versement d’un acompte de 50 %
+                  pour lancer la prestation. Pour le solde, nous restons
+                  flexibles et proposons des paiements en 2, 3 ou 4 fois, selon
+                  vos besoins.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
+                  Est-ce que je pourrai facilement éditer le contenu de mon site
+                  ?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Lors de la livraison de votre site web ou landing page, un
+                  appel est prévu pour vous accompagner et vous permettre de
+                  mettre à jour le contenu en toute autonomie.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
+                  Puis-je me faire rembourser si je ne suis pas satisfait du
+                  service ? ?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Nous ne proposons pas de remboursement, car nous offrons des
+                  révisions illimitées jusqu’à ce que le projet vous satisfasse
+                  entièrement. Notre collaboration se poursuit jusqu’à ce que le
+                  résultat final corresponde parfaitement à vos attentes.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="md:w-1/4">
+            <div className="flex flex-col items-center justify-center">
+              <img src="/julian.png" alt="julian" />
+              <p className="text-2xl my-4">Discutons ensemble</p>
+              <p className="text-[#94A3B8] text-center">
+                Contactez directement le fondateur sur WhatsApp ou planifiez un
+                rendez-vous.
+              </p>
+              <button className="mt-4 bg-[#25D366] rounded-xl flex items-center px-4 py-2 gap-4">
+                <img src="/whatapp.svg" alt="whatapp" />
+                Envoyez moi un message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

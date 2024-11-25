@@ -105,6 +105,40 @@ body {
   display: flex;
 }
 
+.avis-card {
+  width: 320px;
+  border-radius: 15px;
+  padding: 25px;
+  background: #020619;
+  border: 1px solid #81828c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avis-card-p {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.avis-card div {
+  margin-top: 10px;
+}
+
+.avis-card div p:first-child {
+  font-size: 14px;
+}
+
+.avis-card div p:last-child {
+  font-size: 12px;
+  color: #ffffffb3;
+}
+
+footer div:first-child {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+}
+
 @media screen and (max-width: 768px) {
   .offres-content {
     background: url(../../public/bgOffresMobile.png) no-repeat;
