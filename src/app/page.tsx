@@ -21,9 +21,12 @@ export default function Home() {
           <p className="text-[#94A3B8] md:text-2xl text-center mt-[40px]">
             Livraison en 2 à 4 semaines. Prix transparent.
           </p>
-          <button className="button-shadow m-auto mt-[72px]">
-            Découvrir nos offres
-          </button>
+          <a
+            className="m-auto mt-[72px]"
+            href="https://calendly.com/juliancaille/calldecouverte"
+          >
+            <button className="button-shadow ">Découvrir nos offres</button>
+          </a>
         </div>
       </div>
       <CarouselOffres />
@@ -89,7 +92,12 @@ export default function Home() {
               leurs landing pages.
             </p>
           </div>
-          <button className="button-shadow mt-6">Découvrir nos offres</button>
+          <a
+            className="mt-6"
+            href="https://calendly.com/juliancaille/calldecouverte"
+          >
+            <button className="button-shadow ">Découvrir nos offres</button>
+          </a>
         </div>
         <img
           src="/blurBrand.png"
@@ -102,9 +110,14 @@ export default function Home() {
           + de 100 entreprises <strong>nous font déjà confiance</strong>
         </p>
         <CarouselBrands />
-        <button className="clashFont button-shadow mt-[60px]">
-          Ajoutez votre logo ici
-        </button>
+        <a
+          className="mt-[60px]"
+          href="https://calendly.com/juliancaille/calldecouverte"
+        >
+          <button className="clashFont button-shadow">
+            Ajoutez votre logo ici
+          </button>
+        </a>
       </div>
       <div className="mt-[70px] md:mt-[170px] flex flex-col justify-center items-center">
         <p className="text-[36px] clashFont text-center">
@@ -201,20 +214,22 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center mt-[32px] mb-20">
-        <button className="button-shadow">C&apos;est compris, on y va</button>
+        <a href="https://calendly.com/juliancaille/calldecouverte">
+          <button className="button-shadow">C&apos;est compris, on y va</button>
+        </a>
       </div>
-      <div className="flex justify-center flex-col items-center">
+      <div className="px-4 flex justify-center flex-col items-center">
         <img src="/toutEnUn.svg" alt="All in one" />
-        <p className="text-4xl clashFont mt-4">
+        <p className="text-4xl clashFont mt-4 text-center">
           Que peut-on faire <span className="font-semibold">pour vous</span> ?
         </p>
-        <p className="text-[#94A3B8] mt-4 text-xl w-3/4 text-center">
+        <p className="text-[#94A3B8] mt-4 text-xl md:w-3/4 text-center">
           Nous avons réunis les 2 meilleures offres possibles du marché !
           Choisissez l&apos;une de nos offres en et recevez votre landing page
           en 2 à 3 semaines
         </p>
-        <div className="flex mt-10 items-start">
-          <div className=" mt-4 -mr-4 rounded-2xl border border-[#F14343] p-[35px] clashFont bg-[#270707]">
+        <div className="flex flex-col md:flex-row mt-10 items-start">
+          <div className=" md:mt-4 md:-mr-4 rounded-2xl border border-[#F14343] p-[35px] clashFont bg-[#270707]">
             <p className="font-semibold text-3xl">La concurrence</p>
             <p className="text-base font-light uppercase">
               juste une landing page
@@ -295,12 +310,19 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative rounded-2xl border border-[#FFFFFF] p-[35px] z-10 clashFont bg-[#020518]">
-            <img src="/laPlusPopulaire.svg" alt="popular" />
+          <div className="mt-10 md:mt-0 relative rounded-2xl border border-[#FFFFFF] p-[35px] z-10 clashFont bg-[#020518]">
+            <img
+              src="/laPlusPopulaire.svg"
+              alt="popular"
+              className="absolute top-[-18px] left-1/2 transform -translate-x-1/2 "
+            />
             <p className="font-medium text-3xl">
               Notre <span className="font-semibold">offre</span>
             </p>
-            <p className="text-base font-light uppercase">
+            <p className="hidden md:block text-base font-light uppercase">
+              identité graphique + une landing page <br /> + intégration
+            </p>
+            <p className="block md:hidden text-base font-light uppercase">
               identité graphique + une landing page <br /> + intégration
             </p>
             <p className="font-medium text-4xl flex items-center gap-2">
@@ -309,7 +331,7 @@ export default function Home() {
                 <i>HT</i>
               </span>
             </p>
-            <div className="mt-6 gap-4 flex flex-col">
+            <div className="md:mt-6 gap-4 flex flex-col">
               <div className="flex gap-2">
                 <img src="/check.svg" alt="check" />
                 <p>Landing page sur mesure</p>
@@ -362,20 +384,25 @@ export default function Home() {
                   <p>Visuel de seléction linkedin</p>
                 </div>
               </div>
-              <button className="button-shadow m-auto mt-4">
-                Démarrer maintenant
-              </button>
+              <a href="https://calendly.com/juliancaille/calldecouverte">
+                <button className="button-shadow m-auto mt-4">
+                  Démarrer maintenant
+                </button>
+              </a>
             </div>
           </div>
-          <div className="mt-4 -ml-4 rounded-2xl border border-[#FFFFFF] p-[35px] clashFont bg-[#020518]">
+          <div className="mt-4 md:-ml-4 rounded-2xl border border-[#FFFFFF] p-[35px] clashFont bg-[#020518]">
             <p className="mb-2 text-3xl">Notre offre sur mesure</p>
             <p className="mb-6 text-base font-light uppercase">
               prise en comptes des besoins
             </p>
-            <button className="button-shadow">Prendre rendez vous</button>
+            <a href="https://calendly.com/juliancaille/calldecouverte">
+              <button className="button-shadow">Prendre rendez vous</button>
+            </a>
           </div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
