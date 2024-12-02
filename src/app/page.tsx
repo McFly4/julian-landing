@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -427,25 +428,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="hidden h-[65vh] overflow-hidden mt-[70px] md:mt-[170px] md:flex gap-4 px-4">
-        <div className="flex flex-col gap-4">
-          <img src="/realisations/1.svg" alt="1" />
-          <img src="/realisations/2.svg" alt="1" />
-        </div>
-        <div className="flex flex-col gap-4">
-          <img src="/realisations/3.svg" alt="1" />
-          <img src="/realisations/4.svg" alt="1" />
-          <img src="/realisations/5.svg" alt="1" />
-        </div>
-        <div className="flex flex-col gap-4">
-          <img src="/realisations/6.svg" alt="1" />
-          <img src="/realisations/7.svg" alt="1" />
-        </div>
-        <div className="flex flex-col gap-4">
-          <img src="/realisations/8.svg" alt="1" />
-          <img src="/realisations/9.svg " alt="1" />
-        </div>
-      </div>
+      <Projects />
       <div className="hidden md:block mt-[100px] p-[30px]">
         <div className="flex bg-white rounded-2xl p-6 clashFont gap-10">
           <div className="flex flex-col">

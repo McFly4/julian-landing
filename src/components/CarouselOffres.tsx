@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function CarouselOffres() {
-  const numberArray = Array.from({ length: 5 }, (_, i) => i + 1);
+  const numberArray = Array.from({ length: 10 }, (_, i) => i + 1);
   return (
     <div className="my-10">
       <Swiper
@@ -22,7 +22,7 @@ export default function CarouselOffres() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Navigation]}
-        speed={10000}
+        speed={2000}
       >
         {numberArray.map((number) => (
           <SwiperSlide key={number}>

@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -153,12 +154,12 @@ footer div:first-child {
   }
 }
 
-.accordion button {
+.accordion .accordion-item {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   width: 100%;
   box-sizing: border-box;
   background: #020518;
@@ -173,11 +174,16 @@ footer div:first-child {
     border-color 0.3s ease;
 }
 
-.accordion div {
-  margin-bottom: 10px;
+.accordion .accordion-item h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  margin-right: auto;
+  padding-left: 10px;
 }
 
-.accordion button::before {
+.accordion .accordion-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -195,12 +201,28 @@ footer div:first-child {
   pointer-events: none;
 }
 
-.accordion button:hover {
+.accordion div {
+  margin-bottom: 10px;
+}
+
+.accordion .accordion-item:hover {
   box-shadow:
     0 0 10px rgba(255, 255, 255, 0.3),
     0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.accordion button:active {
+.accordion .accordion-item:active {
   border-color: rgba(255, 255, 255, 0.5);
+}
+
+.backgroundOpacity {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.backgroundOpacity div {
+  z-index: -1;
 }
