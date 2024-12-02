@@ -29,7 +29,8 @@ export default function CarouselOffres() {
             <img
               src={`/carousel/${number}.png`}
               alt={`Offre ${number}`}
-              className="object-cover "
+              className="object-cover h-[180px] border-2 border-white"
+              style={{ borderRadius: "5px" }}
             />
           </SwiperSlide>
         ))}

@@ -26,12 +26,15 @@ export default function CarouselOffres() {
       >
         <CarouselContent>
           {numberArray.map((number) => (
-            <CarouselItem key={number} className="pl-1 item-embla">
+            <CarouselItem
+              key={number}
+              className="pl-1 item-embla flex items-center"
+            >
               <div className="flex justify-center items-center mt-[40px]">
                 <img
-                  src={`/brands/${number}.png`}
+                  src={`/brands/${number}.svg`}
                   alt={`Offre ${number}`}
-                  className="object-cover pl-[70px] h-[35px]"
+                  className="object-cover pl-[70px] w-full"
                 />
               </div>
             </CarouselItem>

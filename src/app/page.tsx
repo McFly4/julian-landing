@@ -27,10 +27,7 @@ export default function Home() {
           <p className="text-[#94A3B8] md:text-2xl text-center mt-[40px]">
             Livraison en 2 à 4 semaines. Prix transparent.
           </p>
-          <a
-            className="m-auto mt-[72px]"
-            href="https://calendly.com/juliancaille/calldecouverte"
-          >
+          <a className="m-auto mt-[72px]" href="#pricing">
             <button className="button-shadow ">Découvrir nos offres</button>
           </a>
         </div>
@@ -98,11 +95,8 @@ export default function Home() {
               leurs landing pages.
             </p>
           </div>
-          <a
-            className="mt-6"
-            href="https://calendly.com/juliancaille/calldecouverte"
-          >
-            <button className="button-shadow ">Découvrir nos offres</button>
+          <a href="https://calendly.com/juliancaille/calldecouverte">
+            <button className="button-shadow mt-6">Découvrir nos offres</button>
           </a>
         </div>
         <img
@@ -117,7 +111,8 @@ export default function Home() {
         </p>
         <CarouselBrands />
         <a
-          className="mt-[60px]"
+          target="_blank"
+          className="mt-[60px] z-10"
           href="https://calendly.com/juliancaille/calldecouverte"
         >
           <button className="clashFont button-shadow">
@@ -126,7 +121,7 @@ export default function Home() {
         </a>
       </div>
       <div className="mt-[70px] md:mt-[170px] flex flex-col justify-center items-center">
-        <p className="text-[36px] clashFont text-center">
+        <p className="text-[36px] clashFont text-center leading-none">
           Notre méthode de <br />
           <strong>fonctionnement</strong>
         </p>
@@ -137,8 +132,18 @@ export default function Home() {
           de design, d&apos;architecture web, et d&apos;optimisation UX.
         </p>
       </div>
-      <div className="flex-col md:flex-row flex gap-[30px] mt-[120px] items-center md:items-stretch justify-center">
-        <div className="w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
+      <div className="flex-col md:flex-row flex gap-[30px] mt-[120px] items-center md:items-stretch justify-center relative">
+        <img
+          src="/fonctionnement/blurMethode.png"
+          alt=""
+          className="absolute -z-10 hidden md:flex"
+        />
+        <img
+          src="/fonctionnement/arrowTop.svg"
+          alt=""
+          className="absolute -top-12 left-1/2 transform -translate-x-1/2 hidden md:flex"
+        />
+        <div className="relative w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
           <div className="flex justify-between items-start">
             <img src="/fonctionnement/etape1.svg" alt="icon" />
             <p className="clashFont text-sm">
@@ -156,6 +161,11 @@ export default function Home() {
             className="mt-[40px]"
             src="/fonctionnement/etape1.png"
             alt="etape 1"
+          />
+          <img
+            src="/fonctionnement/arrowBottom.svg"
+            alt=""
+            className="absolute -bottom-14 -right-14 hidden md:flex"
           />
         </div>
         <div className="w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
@@ -178,7 +188,7 @@ export default function Home() {
             alt="etape 2"
           />
         </div>
-        <div className="w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
+        <div className="relative w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
           <div className="flex justify-between items-start">
             <img src="/fonctionnement/etape3.svg" alt="icon" />
             <p className="clashFont text-sm">
@@ -196,6 +206,11 @@ export default function Home() {
             className="mt-[40px]"
             src="/fonctionnement/etape3.png"
             alt="etape 3"
+          />
+          <img
+            src="/fonctionnement/arrowBottom.svg"
+            alt=""
+            className="absolute -bottom-14 -right-14 hidden md:flex"
           />
         </div>
         <div className="w-[90%] md:w-[280px] flex flex-col rounded-xl border justify-between border-[#ffffff80] p-6">
@@ -219,7 +234,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex justify-center mt-[32px] mb-20">
+      <div
+        id="pricing"
+        className="flex justify-center mt-[32px] md:mt-20 mb-20"
+      >
         <a href="https://calendly.com/juliancaille/calldecouverte">
           <button className="button-shadow">C&apos;est compris, on y va</button>
         </a>
@@ -555,7 +573,7 @@ export default function Home() {
           nos clients.
         </p>
         <div className="px-4 md:px-0 mt-10 flex flex-col md:flex-row justify-center gap-[75px]">
-          <div className="md:w-[900px]">
+          <div className="md:w-[900px] accordion">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
@@ -599,7 +617,7 @@ export default function Home() {
                   mettre à jour le contenu en toute autonomie.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3">
+              <AccordionItem value="item-4">
                 <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
                   Puis-je me faire rembourser si je ne suis pas satisfait du
                   service ? ?

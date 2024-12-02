@@ -18,7 +18,10 @@ export default async function Header() {
         <Link href="#program">Notre accompagnement</Link>
         <Link href="#reviews">Avis clients</Link>
       </div>
-      <Link href="#pricing">
+      <Link
+        href="https://calendly.com/juliancaille/calldecouverte"
+        target="_blank"
+      >
         <button className="hidden xl:flex custom-btn font-light">
           Réserver
           <span className="clashFont font-semibold">un appel</span>
