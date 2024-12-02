@@ -12,9 +12,9 @@ import {
 export default async function Header() {
   return (
     <nav className="z-50 fixed w-full bg-[#070A16] border-effect px-4 xl:px-16 py-6 flex items-center justify-between overflow-hidden">
-      <a href="/">
+      <Link href="/">
         <Image src="/logo.svg" alt="Company Logo" width={120} height={45} />
-      </a>
+      </Link>
       <div className="hidden xl:flex gap-10 ">
         <Link href="#whoami">Qui je suis</Link>
         <Link href="#program">Notre accompagnement</Link>

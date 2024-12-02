@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,9 +28,9 @@ export default function Home() {
           <p className="text-[#94A3B8] md:text-2xl text-center mt-[40px]">
             Livraison en 2 à 4 semaines. Prix transparent.
           </p>
-          <a className="m-auto mt-[72px]" href="#pricing">
+          <Link className="m-auto mt-[72px]" href="#pricing">
             <button className="button-shadow ">Découvrir nos offres</button>
-          </a>
+          </Link>
         </div>
       </div>
       <CarouselOffres />
@@ -95,9 +96,9 @@ export default function Home() {
               leurs landing pages.
             </p>
           </div>
-          <a href="https://calendly.com/juliancaille/calldecouverte">
+          <Link href="https://calendly.com/juliancaille/calldecouverte">
             <button className="button-shadow mt-6">Découvrir nos offres</button>
-          </a>
+          </Link>
         </div>
         <img
           src="/blurBrand.png"
@@ -110,7 +111,7 @@ export default function Home() {
           + de 100 entreprises <strong>nous font déjà confiance</strong>
         </p>
         <CarouselBrands />
-        <a
+        <Link
           target="_blank"
           className="mt-[60px] z-10"
           href="https://calendly.com/juliancaille/calldecouverte"
@@ -118,7 +119,7 @@ export default function Home() {
           <button className="clashFont button-shadow">
             Ajoutez votre logo ici
           </button>
-        </a>
+        </Link>
       </div>
       <div className="mt-[70px] md:mt-[170px] flex flex-col justify-center items-center">
         <p className="text-[36px] clashFont text-center leading-none">
@@ -238,9 +239,9 @@ export default function Home() {
         id="pricing"
         className="flex justify-center mt-[32px] md:mt-20 mb-20"
       >
-        <a href="https://calendly.com/juliancaille/calldecouverte">
+        <Link href="https://calendly.com/juliancaille/calldecouverte">
           <button className="button-shadow">C&apos;est compris, on y va</button>
-        </a>
+        </Link>
       </div>
       <div className="px-4 flex justify-center flex-col items-center">
         <img src="/toutEnUn.svg" alt="All in one" />
@@ -408,11 +409,11 @@ export default function Home() {
                   <p>Visuel de seléction linkedin</p>
                 </div>
               </div>
-              <a href="https://calendly.com/juliancaille/calldecouverte">
+              <Link href="https://calendly.com/juliancaille/calldecouverte">
                 <button className="button-shadow m-auto mt-4">
                   Démarrer maintenant
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-4 md:-ml-4 rounded-2xl border border-[#FFFFFF] p-[35px] clashFont bg-[#020518]">
@@ -420,9 +421,9 @@ export default function Home() {
             <p className="mb-6 text-base font-light uppercase">
               prise en comptes des besoins
             </p>
-            <a href="https://calendly.com/juliancaille/calldecouverte">
+            <Link href="https://calendly.com/juliancaille/calldecouverte">
               <button className="button-shadow">Prendre rendez vous</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
