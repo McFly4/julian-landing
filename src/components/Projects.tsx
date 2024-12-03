@@ -7,7 +7,6 @@ export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  // Utiliser scrollYProgress pour contrôler le scale uniquement si l'élément est visible
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.5, 0.8], [0.8, 1, 1.4]);
 
@@ -15,11 +14,11 @@ export default function Projects() {
     <motion.div
       ref={ref}
       style={{
-        scale: isInView ? scale : 1, // Applique le scale uniquement si l'élément est visible
+        scale: isInView ? scale : 1,
         transition: "transform 0.2s ease-out",
         overflow: "hidden",
       }}
-      className="w-full h-[100vh] flex items-center justify-center relative "
+      className="w-full h-[100vh] flex items-center justify-center relative mt-[20vh] mb-[20vh]"
     >
       <h1 className="absolute transform text-8xl clashFont">
         Fait par <strong>laLanding</strong>

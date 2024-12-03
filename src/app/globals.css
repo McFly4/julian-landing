@@ -154,7 +154,7 @@ footer div:first-child {
   }
 }
 
-.accordion .accordion-item {
+.accordion-item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,7 @@ footer div:first-child {
     border-color 0.3s ease;
 }
 
-.accordion .accordion-item h3 {
+.accordion-item h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -183,7 +183,7 @@ footer div:first-child {
   padding-left: 10px;
 }
 
-.accordion .accordion-item::before {
+.accordion-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -205,13 +205,13 @@ footer div:first-child {
   margin-bottom: 10px;
 }
 
-.accordion .accordion-item:hover {
+.accordion-item:hover {
   box-shadow:
     0 0 10px rgba(255, 255, 255, 0.3),
     0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.accordion .accordion-item:active {
+.accordion-item:active {
   border-color: rgba(255, 255, 255, 0.5);
 }
 

@@ -615,7 +615,7 @@ export default function Home() {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className="md:w-1/4">
+          <div className="md:w-1/4 accordion-item">
             <div className="flex flex-col items-center justify-center">
               <img src="/julian.png" alt="julian" />
               <p className="text-2xl my-4">Discutons ensemble</p>
