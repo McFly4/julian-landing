@@ -23,6 +23,20 @@ export default function CarouselOffres() {
         }}
         modules={[Autoplay, Navigation]}
         speed={2000}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
       >
         {numberArray.map((number) => (
           <SwiperSlide key={number}>
