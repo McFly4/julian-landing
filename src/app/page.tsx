@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <CarouselOffres />
       <div className="relative block bg-white py-[55px] md:py-[80px] md:px-[30px]">
-        <div className="offres-content p-4 md:p-20">
+        <div className="offres-content px-4 py-16 md:p-20">
           <div className="mt-[30px] md:mt-0 flex flex-col md:gap-[35px]">
             <div className="flex flex-col md:flex-row md:gap-[100px]">
               <div className="mb-4 md:mb-0 flex flex-col w-[280px]">
@@ -134,7 +134,7 @@ export default function Home() {
           de design, d&apos;architecture web, et d&apos;optimisation UX.
         </p>
       </div>
-      <div className="flex-col md:flex-row flex gap-[30px] mt-[120px] items-center md:items-stretch justify-center relative">
+      <div className="flex-col md:flex-row flex gap-[30px] mt-[40px] md:mt-[120px] items-center md:items-stretch justify-center relative">
         <img
           src="/fonctionnement/blurMethode.png"
           alt=""
@@ -558,7 +558,16 @@ export default function Home() {
         </p>
         <div className="px-4 md:px-0 mt-10 flex flex-col md:flex-row justify-center gap-[75px]">
           <div className="md:w-[900px] accordion">
-            <Accordion type="single" collapsible>
+            <Accordion
+              type="single"
+              collapsible
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+              }}
+            >
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-[#ffffffb3] font-normal text-xl">
                   Combien de temps dure une prestation ?
@@ -615,11 +624,11 @@ export default function Home() {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className="md:w-1/4 accordion-item">
+          <div className="md:w-1/4 accordion-item py-10">
             <div className="flex flex-col items-center justify-center">
               <img src="/julian.png" alt="julian" />
               <p className="text-2xl my-4">Discutons ensemble</p>
-              <p className="text-[#94A3B8] text-center">
+              <p className="text-[#94A3B8] text-center px-2">
                 Contactez directement le fondateur sur WhatsApp ou planifiez un
                 rendez-vous.
               </p>

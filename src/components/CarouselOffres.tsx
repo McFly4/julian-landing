@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 export default function CarouselOffres() {
   const numberArray = Array.from({ length: 10 }, (_, i) => i + 1);
   return (
-    <div className="my-10">
+    <div className="mt-20 mb-10">
       <Swiper
         slidesPerView={5}
         centeredSlides={true}
