@@ -430,7 +430,7 @@ export default function Home() {
       </div>
       <Projects />
       <div className="hidden md:block mt-[100px] p-[30px]">
-        <div className="flex bg-white rounded-2xl p-6 clashFont gap-10">
+        <div className="flex bg-white rounded-2xl p-6 clashFont gap-10 justify-center">
           <div className="flex flex-col">
             <p className="text-black text-3xl">Encore hésitant ?</p>
             <p className="text-black text-3xl">
