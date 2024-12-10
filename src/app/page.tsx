@@ -15,7 +15,7 @@ export default function Home() {
     <div className="pt-[180px]">
       <div className="relative flex justify-center items-center flex-col">
         <img src="/blurHome.png" alt="blur image" className="absolute left-0" />
-        <Image src="/avis.png" alt="Company Logo" width={330} height={45} />
+        <Image src="/avis.svg" alt="Company Logo" width={330} height={45} />
         <div className="mt-[60px] flex flex-col justify-center leading-none">
           <h1 className="text-center text-[32px] md:text-[85px] clashFont font-[500]">
             Ta Landing Page
