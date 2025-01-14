@@ -58,7 +58,7 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="text-[#ffffffcc] text-base md:mt-[18px]">
-                  ans d’expérience digital
+                  d’expérience digital
                 </p>
               </div>
             </div>
