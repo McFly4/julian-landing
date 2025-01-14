@@ -29,9 +29,9 @@ export default function Home() {
           <p className="text-[#94A3B8] md:text-2xl text-center mt-[40px]">
             Livraison en 2 à 4 semaines. Prix transparent.
           </p>
-          <Link className="m-auto mt-[72px]" href="#pricing">
+          <a className="m-auto mt-[72px]" href="#pricing">
             <button className="button-shadow ">Découvrir nos offres</button>
-          </Link>
+          </a>
         </div>
       </div>
       <CarouselOffres />

@@ -34,17 +34,17 @@ export default async function Header() {
           <DropdownMenuTrigger>
             <Image src="/icons/burger.svg" alt="Menu" width={24} height={24} />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-red">
-            <DropdownMenuLabel>
-              <Link href="#whoami">Qui je suis</Link>
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
+          <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href="#program">Notre accompagnement</Link>
+              <a href="#whoami">Qui je suis</a>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href="#reviews">Avis clients</Link>
+              <a href="#program">Notre accompagnement</a>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <a href="#reviews">Avis clients</a>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
